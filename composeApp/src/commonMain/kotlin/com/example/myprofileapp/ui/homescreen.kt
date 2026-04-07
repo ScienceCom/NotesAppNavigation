@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun HomeScreen(
-    // Pastikan namanya onNavigateToDetail dan menerima parameter Int (ID)
     onNavigateToDetail: (Int) -> Unit
 ) {
     Column {
