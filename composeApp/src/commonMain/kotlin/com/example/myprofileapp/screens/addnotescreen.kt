@@ -23,7 +23,7 @@ fun AddNoteScreen(onBack: () -> Unit) {
         }
     ) { padding ->
         Box(modifier = Modifier.padding(padding)) {
-            Text("Formulir Tambah Catatan Baru")
+            Text("  Tambah Catatan Baru")
         }
     }
 }

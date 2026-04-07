@@ -23,7 +23,7 @@ fun EditNoteScreen(noteId: Int, onBack: () -> Unit) {
         }
     ) { padding ->
         Box(modifier = Modifier.padding(padding)) {
-            Text("Halaman untuk mengedit catatan ID: $noteId")
+            Text("  Halaman untuk mengedit catatan ID: $noteId")
         }
     }
 }
