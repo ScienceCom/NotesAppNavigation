@@ -45,6 +45,7 @@ kotlin {
             implementation("org.jetbrains.compose.material:material-icons-core")
             implementation("org.jetbrains.compose.material:material-icons-extended")
             implementation(compose.materialIconsExtended)
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

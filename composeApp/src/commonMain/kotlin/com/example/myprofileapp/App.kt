@@ -1,36 +1,17 @@
 package com.example.myprofileapp
 
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import com.example.myprofileapp.ui.ProfileScreen
-import com.example.myprofileapp.viewmodel.ProfileViewModel
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Surface
-import androidx.compose.ui.Modifier
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.navigation.compose.rememberNavController
+import com.example.myprofileapp.navigation.AppNavGraph
 
 @Composable
 fun App() {
+    MaterialTheme {
+        // Buat NavController di level atas
+        val navController = rememberNavController()
 
-    val viewModel = remember { ProfileViewModel() }
-
-    // 🔥 Ambil state dari ViewModel
-    val state by viewModel.uiState.collectAsState()
-
-    // 🔥 Gunakan state untuk theme
-    val colorScheme = if (state.isDarkMode) {
-        darkColorScheme()
-    } else {
-        lightColorScheme()
-    }
-
-    MaterialTheme(
-        colorScheme = colorScheme
-    ) {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
-        ) {
-            ProfileScreen(viewModel)
-        }
+        // Panggil NavGraph
+        AppNavGraph(navController = navController)
     }
 }
